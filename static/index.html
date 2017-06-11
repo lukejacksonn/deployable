@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Deployable</title>
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <script src="/index.js"></script>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="manifest" href="/manifest.json">
+  </head>
+  <body></body>
+</html>
