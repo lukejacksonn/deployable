@@ -1,0 +1,32 @@
+{
+  "name": "deployable",
+  "version": "1.0.0",
+  "description": "A ready-to-deploy static web app template",
+  "author": "Luke Jackson (lukejacksonn@gmail.com)",
+  "license": "MIT",
+  "main": "index.js",
+  "watch": {
+    "static": { "patterns": "static/*.*", "quiet": true },
+    "script": { "patterns": "src/*", "quiet": true },
+    "serve": { "patterns": "package.json", "quiet": true }
+  },
+  "scripts": {
+    "static": "copyfiles -f static/* dist",
+    "script": "rollup -cf iife -i src/index.js -o dist/index.js",
+    "serve": "http-server-spa dist",
+    "build": "npm run static && npm run script",
+    "start": "npm-watch"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "http-server-spa": "^1.2.0",
+    "npm-watch": "^0.1.9",
+    "rollup": "^0.41.4",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "rollup-plugin-uglify": "^1.0.1"
+  },
+  "dependencies": {
+    "hyperapp": "^0.9.2"
+  }
+}
