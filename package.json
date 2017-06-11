@@ -7,14 +7,14 @@
   "main": "index.js",
   "watch": {
     "static": { "patterns": "static/*.*", "quiet": true },
-    "script": { "patterns": "src/*", "quiet": true },
+    "bundle": { "patterns": "src/*", "quiet": true },
     "serve": { "patterns": "package.json", "quiet": true }
   },
   "scripts": {
     "static": "copyfiles -f static/* dist",
-    "script": "rollup -cf iife -i src/index.js -o dist/index.js",
+    "bundle": "rollup -cf iife -i src/index.js -o dist/index.js",
     "serve": "http-server-spa dist",
-    "build": "npm run static && npm run script",
+    "build": "npm run static && npm run bundle",
     "start": "npm-watch"
   },
   "devDependencies": {
