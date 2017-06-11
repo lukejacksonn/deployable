@@ -3,18 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>Deployable</title>
-    <script>
-      (function(){
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    <script src="/index.js"></script>
+    <meta name="description" content="A ready-to-deploy static web app template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="/index.css">
     <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
+        if (redirect && redirect != location.href) history.replaceState(null, null, redirect)
+        if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js')
+      })()
+    </script>
+    <script src="/index.js"></script>
   </head>
   <body></body>
 </html>
