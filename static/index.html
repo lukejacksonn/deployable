@@ -12,14 +12,12 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="apple-touch-icon" sizes="180x180" href="/icon.png">
     <link rel="icon" type="image/png" href="/icon.png">
-    <script>
-      (function(){
-        var redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        if (redirect && redirect != location.href) history.replaceState(null, null, redirect)
-        if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js')
-      })()
-    </script>
+    <script>(function(){
+      var redirect = sessionStorage.redirect
+      delete sessionStorage.redirect
+      if (redirect && redirect != location.href) history.replaceState(null, null, redirect)
+      if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js')
+    })()</script>
     <script src="/index.js"></script>
   </head>
   <body></body>
