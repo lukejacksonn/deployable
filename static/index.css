@@ -1,6 +1,18 @@
 html {
   font-size: calc(10px + 2vmin);
   font-family: sans-serif;
+  background: white;
+}
+
+body,
+body * {
+  display: block;
+  background: none;
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
 }
 
 body {
@@ -8,22 +20,12 @@ body {
   display: flex;
 }
 
-body * {
-  display: block;
-  border: 0;
-  outline: 0;
-  margin: 0;
-  padding: 0;
-  background: none;
-}
-
 button {
   margin: auto;
+  padding: 2rem;
   font-size: 10rem;
   font-weight: bold;
-  user-select: none;
   cursor: pointer;
-  padding: 2rem;
 }
 
 h1 {
