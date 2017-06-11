@@ -5,11 +5,11 @@ app({
     count: 0,
   },
   actions: {
-    add: s => ({ count: s.count + 1 })
+    add: s => ({ count: s.count + 1 }),
   },
   view: {
     '/': (s,a) => <button onclick={a.add}>{s.count}</button>,
-    '*': _ => <h1>{location.pathname}</h1>,
+    '*': (s,a) => <h1 onclick={e => a.router.go('/')}>Back to {location.hostname}</h1>,
   },
   plugins: [Router],
 })

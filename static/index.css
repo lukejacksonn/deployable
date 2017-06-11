@@ -30,5 +30,7 @@ button {
 
 h1 {
   margin: auto;
-  font-size: 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
 }
