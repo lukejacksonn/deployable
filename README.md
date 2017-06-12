@@ -5,18 +5,15 @@ This repo serves as a template and a step-by-step guide demonstrating how to dep
 
 This workflow is commonly employed by tech companies and is worth getting used to. This process will not cost you anything other than the time it takes to setup.
 
-<br/>
-
-## Before Starting
-
-- Create a [TravisCI](https://travis-ci.org) account
-- Fork this repository
+**IMPORTANT** Before continuing, ensure you have a [TravisCI](https://travis-ci.org) account and have forked [this repository](https://github.com/lukejacksonn/deployable).
 
 <br/>
 
 ## Setup GitHub
 
 ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/1457604/27051779-4a568416-4faf-11e7-8163-91a2c06f8409.gif)
+
+<hr/>
 
 1. Visit [GitHub Personal Access Token Settings](https://github.com/settings/tokens/new)
 2. Enter a `Token Description` and select the `repo` scope
@@ -28,6 +25,8 @@ This workflow is commonly employed by tech companies and is worth getting used t
 ## Setup Travis
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/1457604/27051821-6b7a9a1a-4faf-11e7-8706-4906ffbddcfe.gif)
+
+<hr/>
 
 1. Visit your [TravisCI Dashboard](https://travis-ci.org/profile) and find the `deployable` project
 2. Turn the project switch `on` and click the `settings` icon
