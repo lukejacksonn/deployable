@@ -8,12 +8,12 @@
   "watch": {
     "static": { "patterns": "static", "extensions": "*" , "quiet": true },
     "bundle": { "patterns": "src", "extensions": "*", "quiet": true },
-    "serve": { "patterns": "package.json", "quiet": true }
+    "server": { "patterns": "package.json", "quiet": true }
   },
   "scripts": {
     "static": "ncp static dist",
     "bundle": "rollup -c -i src/index.js -o dist/index.js",
-    "serve": "http-server-spa dist",
+    "server": "http-server-spa dist",
     "build": "npm run static && npm run bundle",
     "start": "npm-watch"
   },
