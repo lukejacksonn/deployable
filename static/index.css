@@ -1,5 +1,5 @@
 html {
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   font-family: sans-serif;
   background: white;
 }
@@ -31,7 +31,7 @@ noscript {
 button {
   margin: auto;
   padding: 2rem;
-  font-size: 10rem;
+  font-size: 8rem;
   font-weight: bold;
   cursor: pointer;
   touch-action: manipulation;
