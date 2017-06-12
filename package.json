@@ -6,20 +6,20 @@
   "license": "MIT",
   "main": "index.js",
   "watch": {
-    "static": { "patterns": ["static/*.*", "static/**/*.*"], "quiet": true },
-    "bundle": { "patterns": ["src/*.*", "src/**/*.*"], "quiet": true },
+    "static": { "patterns": "static", "extensions": "*" , "quiet": true },
+    "bundle": { "patterns": "src", "extensions": "*", "quiet": true },
     "serve": { "patterns": "package.json", "quiet": true }
   },
   "scripts": {
-    "static": "copyfiles -f static/* static/**/* dist",
-    "bundle": "rollup -cf iife -i src/index.js -o dist/index.js",
+    "static": "ncp static dist",
+    "bundle": "rollup -c -i src/index.js -o dist/index.js",
     "serve": "http-server-spa dist",
     "build": "npm run static && npm run bundle",
     "start": "npm-watch"
   },
   "devDependencies": {
-    "copyfiles": "^1.2.0",
     "http-server-spa": "^1.2.0",
+    "ncp": "^2.0.0",
     "npm-watch": "^0.1.9",
     "rollup": "^0.41.4",
     "rollup-plugin-buble": "^0.15.0",
