@@ -1,6 +1,6 @@
 {
+  "version": "1.0.0",
   "name": "deployable",
-  "version": "1.0.2",
   "description": "A ready-to-deploy static web app template",
   "author": "Luke Jackson (lukejacksonn@gmail.com)",
   "license": "MIT",
