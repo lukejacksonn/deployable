@@ -6,12 +6,12 @@
   "license": "MIT",
   "main": "index.js",
   "watch": {
-    "static": { "patterns": "static/*.*", "quiet": true },
-    "bundle": { "patterns": "src/*", "quiet": true },
+    "static": { "patterns": ["static/*.*", "static/**/*.*"], "quiet": true },
+    "bundle": { "patterns": ["src/*.*", "src/**/*.*"], "quiet": true },
     "serve": { "patterns": "package.json", "quiet": true }
   },
   "scripts": {
-    "static": "copyfiles -f static/* dist",
+    "static": "copyfiles -f static/* static/**/* dist",
     "bundle": "rollup -cf iife -i src/index.js -o dist/index.js",
     "serve": "http-server-spa dist",
     "build": "npm run static && npm run bundle",
