@@ -15,9 +15,17 @@ body * {
   outline: 0;
 }
 
-body {
+body,
+noscript {
   height: 100vh;
   display: flex;
+}
+
+noscript {
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
 button {
