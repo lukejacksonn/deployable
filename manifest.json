@@ -1,0 +1,26 @@
+{
+  "short_name": "Deployable",
+  "name": "Deployable Progressive Web App",
+  "description": "A ready-to-deploy static web app template",
+  "display": "fullscreen",
+  "scope": "/",
+  "start_url": "/",
+  "theme_color": "white",
+  "background_color": "white",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "en",
+  "icons": [{
+    "src": "/icons/apple-touch-icon.png",
+    "sizes": "180x180",
+    "type": "image/png"
+  },{
+    "src": "/icons/android-chrome-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },{
+    "src": "/icons/android-chrome-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
