@@ -1,13 +1,21 @@
 # :rocket: deployable.site
-> See this PWA project deployed at https://deployable.site
+> See this project deployed at https://deployable.site
 
-This repo serves as a template and a step-by-step guide demonstrating how to _properly_ deploy a static web application to GitHub pages. The project gets built and deployed by TravisCI every time there is a commit or merge to the master branch. This means no checking in of built assets, no sub-tree pushes just secure centralized deploys and free hosting.
+This repo simply serves as a very minimalist progressive web app boilerplate. The README however is a step-by-step guide demonstrating how to _properly_ deploy a static web application (such as this) to GitHub pages without ever checking in built assets or directly pushing to the `gh-pages` branch. This approach was pieced together from various blog posts and stackoverflow answers, making the most of free services provided by GitHub, TravisCI and CloudFlare to promote applying industry standard workflows to open source apps; review, build, test, deploy _and_ serve over https for free with almost no configuration! Or servers for that matter :fishing_pole_and_fish:
 
-This process will not cost you anything other than the time it takes to setup.
+<hr/>
 
-**Before continuing** ensure you have a [TravisCI](https://travis-ci.org) account and have forked [this repository](https://github.com/lukejacksonn/deployable).
+:angel: You need a free [TravisCI](https://travis-ci.org) account and [CloudFlare](https://travis-ci.org) basic account (if you require custom https domains)
 
+<hr/>
 
+## Setup Overview
+
+1. **Select Project**: single out an existing _deployable_ web app repository or use a fork of this repo
+2. **Obtain Token**: one per project from [here](https://github.com/settings/tokens/new), copy it and use as the value of `GITHUB_TOKEN` in travis
+3. **Enable TravisCI**: switch on builds for the project [here](https://travis-ci.org/profile) and add the `GITHUB_TOKEN` environment variable
+4. **Configure Build**: add a file like [this](https://github.com/lukejacksonn/deployable/blob/master/.travis.yml) to the project root and configure for your application
+5. **Trigger Deploy**: push to master or merge pull request to invoke a full build and deploy :boom:
 
 <br/>
 
@@ -17,7 +25,7 @@ This process will not cost you anything other than the time it takes to setup.
 
 <hr/>
 
-1. Visit [GitHub Personal Access Token Settings](https://github.com/settings/tokens/new)
+1. Navigate to [GitHub Personal Access Token Settings](https://github.com/settings/tokens/new)
 2. Enter a _Token Description_ and select the _repo_ scope
 3. Scroll down and click `Generate Token`
 4. Copy the generated access token to clipboard
