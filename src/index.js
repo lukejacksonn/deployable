@@ -1,4 +1,5 @@
 import { h, app, Router } from 'hyperapp'
+import './index.scss'
 
 app({
   state: {
