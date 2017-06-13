@@ -1,4 +1,4 @@
-# :rocket: deployable.site
+# deployable.site
 > See this project deployed at https://deployable.site
 
 This repo simply serves as a very minimalist progressive web app boilerplate. The README however is a step-by-step guide demonstrating how to _properly_ deploy a static web application (such as this) to GitHub pages without ever checking in built assets or directly pushing to the `gh-pages` branch. This approach was pieced together from various blog posts and stackoverflow answers, making the most of free services provided by GitHub, TravisCI and CloudFlare to promote applying industry standard workflows to open source apps; review, build, test, deploy _and_ serve over https for free with almost no configuration! Or servers for that matter :fishing_pole_and_fish:

@@ -5,6 +5,7 @@
   "author": "Luke Jackson (lukejacksonn@gmail.com)",
   "license": "MIT",
   "main": "index.js",
+  "output": "dist",
   "watch": {
     "static": { "patterns": "static", "extensions": "*" , "quiet": true },
     "bundle": { "patterns": "src", "extensions": "*", "quiet": true },
